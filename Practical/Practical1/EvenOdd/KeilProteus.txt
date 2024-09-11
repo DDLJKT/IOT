@@ -1,0 +1,17 @@
+#include<REGX51.H>
+
+void main(void) 
+{
+    unsigned int i;
+    P1=0X04;
+    P2=0X04;
+    while(1)
+    {
+        P1=0X03;
+        P2=0X01;
+        for(i=0;i<4000;i++);
+        P1=0X04;
+        P2=0X02;
+        for(i=0;i<4000;i++);
+    }
+}

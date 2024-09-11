@@ -1,0 +1,18 @@
+import RPi.GPIO as g
+from time import sleep
+g.setmode(g.Board)
+g.setup(11,g.OUT) #red
+g.setup(12,g.OUT) #yellow
+g.setup(13,g.OUT) #green
+g.setup(14,g.OUT) #blue
+while True:
+    g.output(11,True)
+    g.output(12,False)
+    g.output(13,True)
+    g.output(14,False)
+    sleep(1)
+    g.output(11,False)
+    g.output(12,True)
+    g.output(13,False)
+    g.output(14,True)
+    sleep(1)
